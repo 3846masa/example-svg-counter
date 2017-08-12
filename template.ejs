@@ -1,0 +1,25 @@
+<svg
+  width="<%= width * numbers.length %>px"
+  height="<%= height %>px"
+  version="1.1" baseProfile="full"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:ev="http://www.w3.org/2001/xml-events">
+
+  <defs>
+    <% images.forEach((base64, idx) => { %>
+      <image
+        xlink:href="data:image/png;base64,<%= base64 %>"
+        id="<%= idx %>" x="0" y="0"
+        width="<%= width %>px"
+        height="<%= height %>px" />
+    <% }); %>
+  </defs>
+
+  <% numbers.forEach((number, idx) => { %>
+    <use
+      xlink:href="#<%= number %>"
+      x="<%= width * idx %>px" y="0" />
+  <% }); %>
+
+</svg>

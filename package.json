@@ -1,0 +1,14 @@
+{
+  "name": "example-svg-counter",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "3846masa <3846masahiro+git@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.3"
+  }
+}
